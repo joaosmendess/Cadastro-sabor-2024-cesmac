@@ -8,7 +8,7 @@
 /* Estilo do corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f3f3f3;
     color: #333333;
     display: flex;
     justify-content: center;
@@ -30,8 +30,7 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #f5a623;
-    font-family: 'Montserrat', sans-serif;
+    color: #333333;
     font-size: 24px;
     font-weight: 600;
 }
@@ -53,9 +52,9 @@ label {
 input[type="text"], input[type="email"], input[type="date"] {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #4a90e2;
+    border: 2px solid blue;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #333333;
     font-size: 16px;
     font-family: 'Arial', sans-serif;
@@ -63,7 +62,7 @@ input[type="text"], input[type="email"], input[type="date"] {
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus {
-    border-color: #f5a623;
+    border-color: #4a90e2;
 }
 
 input::placeholder {
@@ -114,11 +113,11 @@ input.error {
 }
 
 .btn-submit {
-    background-color: #4caf50;
+    background-color: green;
 }
 
 .btn-reset {
-    background-color: #f44336;
+    background-color: red;
 }
 
 .btn:hover {

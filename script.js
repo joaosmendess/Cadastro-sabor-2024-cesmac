@@ -76,14 +76,15 @@ document.getElementById('registration-form').addEventListener('submit', function
         preferences.classList.remove('error');
     }
 
-
+    // Prevent form submission if there are errors
     if (!formIsValid) {
         event.preventDefault();
     } else {
-        event.preventDefault(); 
+        event.preventDefault(); // Remove this if you want to actually submit the form
         const successMessage = document.getElementById('success-message');
         successMessage.style.display = 'block';
 
+        // Ocultar a mensagem de sucesso após 5 segundos
         setTimeout(function() {
             successMessage.style.display = 'none';
         }, 5000);
