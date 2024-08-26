@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sabor 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registration-form">
+            <h2>Cadastro - Sabor 2024</h2>
+            
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                <span class="error-message" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">Data de Nascimento:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <span class="error-message" id="birthdate-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="residence">Residência:</label>
+                <input type="text" id="residence" name="residence" placeholder="Digite sua residência" required>
+                <span class="error-message" id="residence-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="preferences">Preferências de Alimentação:</label>
+                <input type="text" id="preferences" name="preferences" placeholder="Digite suas preferências" required>
+                <span class="error-message" id="preferences-error"></span>
+            </div>
+
+            <div class="button-group">
+                <input type="submit" value="Salvar" class="btn btn-submit">
+                <input type="reset" value="Limpar" class="btn btn-reset">
+            </div>
+
+            <div class="success-message" id="success-message">
+                Formulário enviado com sucesso!
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

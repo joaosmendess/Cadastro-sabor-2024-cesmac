@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container para centralizar o formulário */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+}
+
+/* Título do formulário */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #f5a623;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Estilo dos grupos de formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"], input[type="email"], input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333333;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus {
+    border-color: #f5a623;
+}
+
+input::placeholder {
+    color: #999999;
+    font-style: italic;
+}
+
+/* Mensagens de erro */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+input.error {
+    border-color: red;
+}
+
+/* Mensagem de sucesso */
+.success-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.btn {
+    width: 48%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #4caf50;
+}
+
+.btn-reset {
+    background-color: #f44336;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
