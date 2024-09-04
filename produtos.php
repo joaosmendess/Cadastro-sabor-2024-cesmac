@@ -1,21 +1,11 @@
 <?php
-$produtos = [
-    [
-        "nome" => "Snack Saudável",
-        "descricao" => "Snack feito com frutas desidratadas",
-        "preco" => 15.90
-    ],
-    [
-        "nome" => "Refeição Congelada Fitness",
-        "descricao" => "Refeição balanceada, rica em proteínas",
-        "preco" => 25.99
-    ],
-    [
-        "nome" => "Suco Natural Detox",
-        "descricao" => "Suco natural à base de frutas e vegetais",
-        "preco" => 8.75
-    ]
-];
+include 'db.php'; // Conecta ao banco de dados
+
+// Consulta para buscar os produtos
+$sql = "SELECT * FROM produtos";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$produtos = $stmt->fetchAll(PDO::FETCH_ASSOC); // Recupera todos os produtos como array associativo
 ?>
 
 <!DOCTYPE html>
@@ -29,13 +19,15 @@ $produtos = [
 <body>
     <div class="container">
         <h1>Lista de Produtos</h1>
-        <?php foreach ($produtos as $index => $produto): ?>
+        <?php foreach ($produtos as $produto): ?>
             <div class="produto">
-                <a href="detalhe_produto.php?index=<?= $index ?>" class="produto-nome">
-                    <?= htmlspecialchars($produto["nome"]) ?>
-                </a>
-                <p class="produto-descricao"><?= htmlspecialchars($produto["descricao"]) ?></p>
-                <p class="produto-preco">Preço: R$ <?= number_format($produto["preco"], 2, ',', '.') ?></p>
+                <p><strong><?= htmlspecialchars($produto['nome']) ?></strong></p>
+                <p><?= htmlspecialchars($produto['descricao']) ?></p>
+                <p>Preço: R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
+                <!-- Botão para remover o produto -->
+                <a href="remover.php?id=<?= $produto['id'] ?>" class="btn btn-danger">Remover</a>
+                <!-- Link para alterar o produto -->
+                <a href="alterar.php?id=<?= $produto['id'] ?>" class="btn btn-warning">Alterar</a>
             </div>
         <?php endforeach; ?>
     </div>
